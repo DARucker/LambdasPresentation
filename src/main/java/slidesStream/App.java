@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class App {
 
@@ -31,7 +32,7 @@ public class App {
 				.filter(x -> x.getName().startsWith("B"))  // (Predicate<? super T> predicate) return Stream<T>
 				.sorted(Comparator.comparing(City::getName)) // (Comparator<? super T> comparator) return Stream<T>
 				.limit(2)                             // limit(long maxSize) return Stream<T>
-				.forEach(x -> System.out.println(x.getName())); // forEach(Consumer<? super T> action) void
+				.forEach(x -> System.out.println(x.getName())); // forEach(Consumer<? super T> action) void (Terminal operation)
 
 		// agregamos un peek al pipeline
 		System.out.println("\n" + "Filtramos por nombre, ordenamos y limitamos la cantidad de respuestas");
@@ -48,7 +49,7 @@ public class App {
 				.toList();
 		spain.forEach(System.out::println);
 
-		// cambiamos el Stream a DoubleStream
+		// transformacion o mapeo de Stream a DoubleStream
 		System.out.println("\n" + "Suma de los valores de un campo");
 		double population = cities.stream()
 				.filter(x -> x.getCountry().equalsIgnoreCase("Argentina") && x.getName().startsWith("B"))// (Predicate<? super T> predicate) return Stream<T>
@@ -56,11 +57,19 @@ public class App {
 				.sum();                             // sum es un metodo de la interface DoubleStream return double
 		System.out.println("Total population: " + population);
 
-		// cambiamos el Stream a IntStream
+		// transformacion o mapeo de Stream a IntStream
 		System.out.println("\n" + "Cuenta los elementos");
 		long cantidad = cities.stream()
 				.count();                // metodo de la interface Stream. Tambien esta presente en IntStream LongStream DoubleStream return long
 		System.out.println("cantidad: " + cantidad);
+
+
+		System.out.println("\n" + "Convertimos la lista de City en una de String");
+		List<String> countries = cities.stream()
+				.map(City::getName) 			// map(Function<? super T,? extends R> mapper) return <R> Stream<R>
+				.collect(Collectors.toList());	// collect(Collector<? super T,A,R> collector) return default List<T>
+		countries.forEach(System.out::println);
+
 
 		// retornamos un Optional
 		System.out.println("\n" + "Filtramos y devolvemos un Optional e imprimimos su valor o un mensaje si resulta vacio");
