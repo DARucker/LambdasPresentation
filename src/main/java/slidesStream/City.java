@@ -29,4 +29,13 @@ public class City {
 	public void setPopulation(double population) {
 		this.population = population;
 	}
+
+	@Override
+	public String toString() {
+		return "City{" +
+				"name='" + name + '\'' +
+				", country='" + country + '\'' +
+				", population=" + population +
+				'}';
+	}
 }

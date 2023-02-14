@@ -35,22 +35,23 @@ public class Slide1 {
 */
 	}
 /*
-	// 6. El metodo recibe por parametro la interfaz ya implementada como si fuera una función.
+	// 6. El metodo recibe por parametro la interfaz ya implementada como si fuera una funciï¿½n.
 	public static void printLength(Longitud l) {
 		System.out.println("La longitud de Hola Mundo es " + l.longitud("Hola mundo") + "\n");
 	}*/
-}
 
-@FunctionalInterface
-interface Longitud {
-	int longitud(String s);
-}
 
-interface Mayuscula {
-	String mayuscula(String s1);
-}
+	@FunctionalInterface
+	interface Longitud {
+		int longitud(String s);
+	}
 
-@FunctionalInterface
-interface Operation<T, R> {
-	R operation(T t);
+	interface Mayuscula {
+		String mayuscula(String s1);
+	}
+
+	@FunctionalInterface
+	interface Operation<T, R> {
+		R operation(T t);
+	}
 }
