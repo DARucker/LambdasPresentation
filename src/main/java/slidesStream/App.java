@@ -15,16 +15,17 @@ public class App {
 	public static void streamPractice() {
 
 		List<City> cities = new ArrayList<>();
-		cities.add(new City("Buenos Aires", "Argentina", 2.5));
-		cities.add(new City("Mendoza", "Argentina", 1.0));
-		cities.add(new City("Rosario", "Argentina", 1.4));
-		cities.add(new City("Cordoba", "Argentina", 1.2));
-		cities.add(new City("Madrid", "Spain", 1.8));
-		cities.add(new City("Valencia", "Spain", 0.9));
-		cities.add(new City("Barcelona", "Spain", 1.5));
+		cities.add(new City("Buenos Aires", "Argentina", 3.1));
+		cities.add(new City("Mendoza", "Argentina", 2.0));
+		cities.add(new City("Rosario", "Argentina", 1.3));
+		cities.add(new City("Cordoba", "Argentina", 1.6));
+		cities.add(new City("Madrid", "Spain", 3.3));
+		cities.add(new City("Valencia", "Spain", 0.8));
+		cities.add(new City("Barcelona", "Spain", 1.6));
 		cities.add(new City("Zaragoza", "Spain", 1));
-		cities.add(new City("Girona", "Spain", 1));
-		cities.add(new City("Badalona", "Spain", 1));
+		cities.add(new City("Girona", "Spain", 0.1));
+		cities.add(new City("Badalona", "Spain", 0.2));
+
 
 		// demostracion del pipeline
 		System.out.println("Filtramos por nombre, ordenamos y limitamos la cantidad de respuestas");
