@@ -37,11 +37,11 @@ public class App {
 		// agregamos un peek al pipeline
 		System.out.println("\n" + "Filtramos por nombre, ordenamos y limitamos la cantidad de respuestas");
 		cities.stream()
-				.filter(x -> x.getCountry().startsWith("A")) // (Predicate<? super T> predicate) return Stream<T>
-				.peek(System.out::println) // peek(Consumer<? super T> action) return Stream<T>
-				.sorted(Comparator.comparing(City::getName)) // sorted(Comparator<? super T> comparator)
-				.limit(2)                             // limit(long maxSize) return Stream<T>
-				.forEach(x -> System.out.println(x.getName())); // forEach(Consumer<? super T> action) void
+				.filter(x -> x.getCountry().startsWith("A")) 		// (Predicate<? super T> predicate) return Stream<T>
+				.peek(System.out::println) 							// peek(Consumer<? super T> action) return Stream<T> // accion colateral
+				.sorted(Comparator.comparing(City::getName).reversed()) 		// sorted(Comparator<? super T> comparator)
+				.limit(2)                             		// limit(long maxSize) return Stream<T>
+				.forEach(x -> System.out.println(x.getName())); 	// forEach(Consumer<? super T> action) void
 
 		System.out.println("\n" + "Obtenemos un nuevo List al final del stream e imprimimos su contenido");
 		List<City> spain = cities.stream()
@@ -53,15 +53,15 @@ public class App {
 		System.out.println("\n" + "Suma de los valores de un campo");
 		double population = cities.stream()
 				.filter(x -> x.getCountry().equalsIgnoreCase("Argentina") && x.getName().startsWith("B"))// (Predicate<? super T> predicate) return Stream<T>
-				.mapToDouble(x -> x.getPopulation())// mapToDouble(ToDoubleFunction<? super T> mapper) return DoubleStream
-				.sum();                             // sum es un metodo de la interface DoubleStream return double
+				.mapToDouble(x -> x.getPopulation())				// mapToDouble(ToDoubleFunction<? super T> mapper) return DoubleStream
+				.sum();                             				// sum es un metodo de la interface DoubleStream return double
 		System.out.println("Total population: " + population);
 
 		// transformacion o mapeo de Stream a IntStream
 		System.out.println("\n" + "Cuenta los elementos");
 		long cantidad = cities.stream()
-				.count();                // metodo de la interface Stream. Tambien esta presente en IntStream LongStream DoubleStream return long
-		System.out.println("cantidad: " + cantidad);
+				.count();                							// metodo de la interface Stream. Tambien esta presente en IntStream LongStream DoubleStream return long
+		System.out.println("cantidad: " + cantidad);				// es una operacion terminal de reduccion
 
 
 		System.out.println("\n" + "Convertimos la lista de City en una de String");
