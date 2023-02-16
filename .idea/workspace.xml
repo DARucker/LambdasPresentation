@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6306ff3a-cd01-4dc8-b66c-71921bacb90a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/slidesStream/OperacionesTerminales2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/slidesStream/OperacionesTerminalesDeConsulta.java" afterDir="false" />
+    <list default="true" id="6306ff3a-cd01-4dc8-b66c-71921bacb90a" name="Changes" comment="commit nuevas clases">
+      <changelist_data name="Dario" email="dariomsn@yahoo.com.ar" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/slidesStream/ObtaningStream.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/slidesStream/cristian.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PresentacionLambdas.iml" beforeDir="false" afterPath="$PROJECT_DIR$/PresentacionLambdas.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/slidesStream/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slidesStream/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slidesStream/OperacionesTerminales2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slidesStream/OperacionesTerminales2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/slidesStream/OperacionesTerminalesDeConsulta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/slidesStream/OperacionesTerminalesDeConsulta.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +26,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Dario &lt;dariomsn@yahoo.com.ar&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -57,7 +63,7 @@
       <recent name="slidesStream" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.OperacionesTerminalesDeConsulta">
+  <component name="RunManager" selected="Application.OperacionesTerminales2">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="slidesStream.App" />
       <module name="PresentacionLambdas" />
@@ -123,8 +129,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.OperacionesTerminalesDeConsulta" />
         <item itemvalue="Application.OperacionesTerminales2" />
+        <item itemvalue="Application.OperacionesTerminalesDeConsulta" />
         <item itemvalue="Application.App" />
         <item itemvalue="Application.Slide1" />
       </list>
@@ -163,5 +169,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="commit nuevas clases" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit nuevas clases" />
   </component>
 </project>

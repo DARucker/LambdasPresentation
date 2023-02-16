@@ -38,7 +38,7 @@ public class OperacionesTerminalesDeConsulta {
         System.out.println();
 
         Optional<City> spain = cities.stream()
-                .filter(x -> x.getCountry().equalsIgnoreCase("spain"))       // (Predicate<? super T> predicate)
+                .filter(x -> x.getCountry().equalsIgnoreCase("spain"))       // (Predicate<? super T> predicate) return boolean.
                 .findAny();                                                             //  return Optional.
 
         spain.ifPresentOrElse(

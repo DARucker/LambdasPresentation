@@ -11,6 +11,8 @@ public class OperacionesTerminales2 {
 
     public static void streamPractice() {
 
+
+
         List<City> cities = new ArrayList<>();
         cities.add(new City("Buenos Aires", "Argentina", 3.1));
         cities.add(new City("Mendoza", "Argentina", 2.0));
@@ -25,13 +27,13 @@ public class OperacionesTerminales2 {
 
 
         // 1
-        System.out.println("Utilización del método reduce acumulando mediante una multiplicación");
+        System.out.println("\n" + "Utilización del método reduce");
 
         OptionalDouble calculo = cities.stream()
                 .filter(x -> x.getName().startsWith("B")
                         || x.getName().startsWith("M"))  // (Predicate<? super T> predicate) return Stream<T>
                 .mapToDouble(x -> x.getPopulation())// mapToDouble(ToDoubleFunction<? super T> mapper) return DoubleStream
-                .reduce((x, y) -> x * y);           //  reduce(BinaryOperator<T> accumulator)
+                .reduce((x, y) -> x - y);           //  reduce(BinaryOperator<T> accumulator)
                                                     // Applies the function to the given arguments.
 
                                                     //        int multiplicacion = 0;
@@ -41,12 +43,12 @@ public class OperacionesTerminales2 {
         calculo.ifPresent(System.out::println);
 
         // 2
-        System.out.println("Utilización del método reduce con identity");
+        System.out.println("\n" + "Utilización del método reduce con identity para obtener la poblacion que no vive en ciudades que comienzan con B ni M");
         double calculo1 = cities.stream()
                 .filter(x -> x.getName().startsWith("B")
                         || x.getName().startsWith("M"))  // (Predicate<? super T> predicate) return Stream<T>
                 .mapToDouble(x -> x.getPopulation())     // mapToDouble(ToDoubleFunction<? super T> mapper) return DoubleStream
-                .reduce(1000, (x, y) -> x * y);   //  (T identity, BinaryOperator<T> accumulator) return T
+                .reduce(46, (x, y) -> x - y);   //  (T identity, BinaryOperator<T> accumulator) return T
                                                          // Applies the function to the given arguments.
 
                                                         //        int multiplicacion = 1000;
