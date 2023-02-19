@@ -24,15 +24,11 @@ public class DemostracionSintaxis {
 }
 
 @FunctionalInterface
-interface Sintaxis {
-	float operacion(float a, float b);
-}
+interface Sintaxis {float operacion(float a, float b);}
 
 @FunctionalInterface
 interface Sintaxis2 {
 	float operacion2 (float a);
-	
-	// agrego un default method para fines de demostración
 	default public void saludo() {
 		System.out.println("Fin de la demostracion");
 	}

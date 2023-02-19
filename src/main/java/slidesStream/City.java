@@ -1,6 +1,6 @@
 package slidesStream;
 
-public class City {
+public class City implements Comparable <City> {
 
 	private String name;
 	private String country;
@@ -29,7 +29,6 @@ public class City {
 	public void setPopulation(double population) {
 		this.population = population;
 	}
-
 	@Override
 	public String toString() {
 		return "City{" +
@@ -37,5 +36,10 @@ public class City {
 				", country='" + country + '\'' +
 				", population=" + population +
 				'}';
+	}
+
+	@Override
+	public int compareTo(City city) {
+		return name.compareTo(city.getName());
 	}
 }
