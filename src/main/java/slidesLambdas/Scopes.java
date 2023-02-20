@@ -1,17 +1,17 @@
 package slidesLambdas;
 
-public class AmbitoVariables {
+public class Scopes {
 
 	static float e; 
 	static float f = 1;
 	
 	public static void main(String[] args) {
 
-		ambitoDeLasVariables();
+		paramScopes();
 
 	}
 	
-	public static void ambitoDeLasVariables() {
+	public static void paramScopes() {
 		float c; // solo admite variables locales cuando son finales
 		final int d = 3;
 		

@@ -1,18 +1,18 @@
 package slidesLambdas;
 
-public class DemostracionSintaxis {
+public class Syntax {
 
 	public static void main(String[] args) {
 
 		// + de una linea: requiere llaves y clausula return
-		Sintaxis stx = (float a, float b) -> {
+		Stx stx = (float a, float b) -> {
 			int c = 3;
 			return (a + b + c);
 		};
 		System.out.println("El resultado es: " + stx.operacion(15, 6));
 
 		// sintaxis abreviada
-		Sintaxis stx1 = (a, b) -> (a + b);
+		Stx stx1 = (a, b) -> (a + b);
 		System.out.println("El resultado es: " + stx1.operacion(3, 6));
 
 		// cuando recibe solo 1 parametro no requiere brackets
@@ -24,7 +24,7 @@ public class DemostracionSintaxis {
 }
 
 @FunctionalInterface
-interface Sintaxis {float operacion(float a, float b);}
+interface Stx {float operacion(float a, float b);}
 
 @FunctionalInterface
 interface Sintaxis2 {
